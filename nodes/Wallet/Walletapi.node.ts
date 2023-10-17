@@ -38,8 +38,8 @@ credentials: [
     properties: [
       // Resources and operations here
 			{
-				displayName: 'Resource',
-				name: 'resource',
+				displayName: 'Ethereum Adress',
+				name: '',
 				type: 'options',
 				options: [
 					{
