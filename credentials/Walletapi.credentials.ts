@@ -1,35 +1,36 @@
 import {
-	IAuthenticateGeneric,
-	ICredentialTestRequest,
-	ICredentialType,
-	INodeProperties,
+  INodeProperties,
+  ICredentialType,
+  IAuthenticateGeneric,
+  ICredentialTestRequest,
 } from 'n8n-workflow';
 
-export class FriendGridApi implements ICredentialType {
-	name = 'friendGridApi';
-	displayName = 'FriendGrid API';
-	properties: INodeProperties[] = [
-		{
-			displayName: 'API Key',
-			name: 'apiKey',
-			type: 'string',
-			default: '',
-		},
-	];
+export class WalletBalanceApi implements ICredentialType {
+  name = 'walletBalanceApi';
+  displayName = 'Wallet Balance API';
+  properties: INodeProperties[] = [
+    {
+      displayName: 'API Key',
+      name: 'apiKey',
+      type: 'string',
+      default: '',
+    },
+  ];
 
-	authenticate: IAuthenticateGeneric = {
-		type: 'generic',
-		properties: {
-			headers: {
-				Authorization: '=Bearer {{$credentials.apiKey}}',
-			},
-		},
-	};
+  authenticate: IAuthenticateGeneric = {
+    type: 'generic',
+    properties: {
+      headers: {
+        Authorization: 'Bearer {{$credentials.apiKey}}',
+      },
+    },
+  };
 
-	test: ICredentialTestRequest = {
-		request: {
-			baseURL: 'https://api.sendgrid.com/v3',
-			url: '/marketing/contacts',
-		},
-	};
+  test: ICredentialTestRequest = {
+    request: {
+      baseURL: 'https://api.example.com', // Set your API base URL here
+      url: '/test', // Update with the appropriate test endpoint
+      method: 'GET',
+    },
+  };
 }
