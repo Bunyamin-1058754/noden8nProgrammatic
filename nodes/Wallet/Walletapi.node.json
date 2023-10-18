@@ -1,9 +1,9 @@
 {
-	"node": "n8n-nodes-base.FriendGrid",
+	"node": "n8n-nodes-base.Walletapi",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
-		"Miscellaneous"
+		"Finance & Accounting"
 	],
 	"resources": {
 		"credentialDocumentation": [

@@ -1,10 +1,10 @@
 {
 
-	"name": "n8n-nodes-friendgrid",
+	"name": "n8n-nodes-Walletapi",
 
 	"version": "0.1.0",
 
-	"description": "n8n node to create contacts in SendGrid",
+	"description": "n8n node to check balance on your ethereum wallet",
 
 	"keywords": [
 
@@ -48,7 +48,7 @@
 
 		"credentials": [
 
-			"dist/credentials/FriendGridApi.credentials.js"
+			"dist/credentials/Walletapi.credentials.js"
 
 		],
 
